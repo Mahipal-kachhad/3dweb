@@ -3,10 +3,11 @@ import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperRef } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaPause, FaPlay } from "react-icons/fa";
+import { fadeUp } from "../function";
 
 const images = [
   { url: "/dham/maa10.png" },
@@ -42,18 +43,18 @@ const AboutMVTY = () => {
   };
 
   return (
-    <div className="mt-15">
-      <h1
-        data-aos="fade-up"
+    <div className="mt-15 pb-5">
+      <motion.h1
         className="w-3/4 mx-auto text-5xl font-bold text-white"
+        {...fadeUp()}
       >
         About MVTY Dham
-      </h1>
+      </motion.h1>
 
       <div>
         <Swiper
           ref={swiperRef}
-          className="mt-15 min-h-70 !w-full"
+          className="mt-15 min-h-70"
           modules={[Pagination, Autoplay]}
           speed={900}
           spaceBetween={15}
@@ -67,7 +68,7 @@ const AboutMVTY = () => {
           {images.map((val, idx) => (
             <SwiperSlide
               key={idx}
-              className="!h-[455px] flex items-center justify-center !w-[700px] rounded-2xl overflow-hidden object-cover object-center"
+              className="!w-[70vw] !h-[39vw] flex items-center justify-center  rounded-3xl overflow-hidden object-cover object-center"
             >
               <img src={val.url} alt="sliderImage" />
             </SwiperSlide>
@@ -75,16 +76,16 @@ const AboutMVTY = () => {
         </Swiper>
       </div>
 
-      <div className="sticky bottom-0 z-10 mt-10 py-10">
+      <div className="sticky bottom-0 z-10 py-10">
         <div className="flex items-center justify-center mt-5 gap-4">
           <button
             onClick={handlePlayPause}
-            className="p-4 rounded-full bg-black/10 backdrop-blur-md text-[#b3b3b3] font-medium hover:bg-black/20 transition sticky bottom-10 shadow-[inset_0.3px_0.3px_0.6px_rgba(255,255,255,0.8),inset_-0.3px_-0.3px_0.6px_rgba(0,0,0,0.9)]"
+            className="p-4 lg:p-5 rounded-full backdrop-blur-md bg-[rgba(42,42,45,0.6)] text-[#ffffff] font-medium transition"
           >
             {isPlaying ? <FaPause /> : <FaPlay />}
           </button>
           <div
-            className="p-5 rounded-full gap-5 about-mvty-pagination flex items-center bg-black/10 backdrop-blur-md text-[#b3b3b3] font-medium hover:bg-black/20 transition !w-fit shadow-[inset_0.3px_0.3px_0.6px_rgba(255,255,255,0.8),inset_-0.3px_-0.3px_0.6px_rgba(0,0,0,0.9)]"
+            className="p-5 lg:p-6 rounded-full gap-[11px] about-mvty-pagination flex items-center bg-[rgba(42,42,45,0.72)] backdrop-blur-md text-[#b3b3b3] font-medium  transition !w-fit"
             ref={paginationRef}
           />
         </div>
@@ -95,12 +96,12 @@ const AboutMVTY = () => {
           width: 8px;
           height: 8px;
           background-color: #fff;
-          opacity: 0.5;
+          opacity: 0.8;
           border-radius: 50%;
           transition: width 0.3s ease-in-out, border-radius 0.3s ease-in-out;
         }
         .swiper-pagination-bullet-active {
-          width: 32px;
+          width: 65px;
           border-radius: 8px;
           background-color: rgba(255, 255, 255, 0.3);
           opacity: 1; /* Reset opacity to 1 since we handle it in the background-color */

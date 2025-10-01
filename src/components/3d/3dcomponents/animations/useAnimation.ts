@@ -165,12 +165,12 @@ export const useAnimation = (
       );
       tl.to(
         [light.current, lightB.current],
-        { intensity: 0, duration: 1.5, ease: "power1.in" },
+        { intensity: 0, duration: 0.7, ease: "power1.out" },
         "+=2"
       );
       tl.to(
         [circle.material, burst.material],
-        { opacity: 0, duration: 1.5, ease: "power1.in" },
+        { opacity: 0, duration: 0.7, ease: "power1.out" },
         "<"
       );
     },
