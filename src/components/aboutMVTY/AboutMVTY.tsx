@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperRef } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaPause, FaPlay } from "react-icons/fa";
-import { fadeUp } from "../function";
+import fadeUp from "../function";
 
 const images = [
   { url: "/dham/maa10.png" },
@@ -21,7 +21,13 @@ const AboutMVTY = () => {
   const swiperRef = useRef<SwiperRef>(null);
   const paginationRef = useRef<HTMLDivElement>(null);
 
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    if (swiperRef.current) {
+      swiperRef.current.swiper.autoplay.stop();
+    }
+  }, []);
 
   const handlePlayPause = () => {
     if (swiperRef.current) {
@@ -56,19 +62,22 @@ const AboutMVTY = () => {
           ref={swiperRef}
           className="mt-15 min-h-70"
           modules={[Pagination, Autoplay]}
-          speed={900}
-          spaceBetween={15}
+          speed={1100}
+          spaceBetween={20}
           slidesPerView={"auto"}
           centeredSlides
           loop
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           pagination={{ clickable: true, el: ".about-mvty-pagination" }}
           onAutoplayTimeLeft={handleAutoplayProgress}
         >
           {images.map((val, idx) => (
             <SwiperSlide
               key={idx}
-              className="!w-[70vw] !h-[39vw] flex items-center justify-center  rounded-3xl overflow-hidden object-cover object-center"
+              className="!w-[65vw] !h-[39vw] flex items-center justify-center  rounded-[3.3rem] overflow-hidden object-cover object-center"
             >
               <img src={val.url} alt="sliderImage" />
             </SwiperSlide>

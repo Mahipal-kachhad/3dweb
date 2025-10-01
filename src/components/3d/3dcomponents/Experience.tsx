@@ -98,7 +98,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
           <AuraCircle ref={auraRef} />
         </mesh>
         <mesh layers={2}>
-          <Shiva
+          {/* <Shiva
             ref={shivaRef}
             scale={0.15}
             position={[1.3, -0.29, 3]}
@@ -115,7 +115,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
             scale={0.18}
             position={[-1.3, -0.29, 3.1]}
             rotation-y={2.87}
-          />
+          /> */}
           <Cube position={[-0.2, 0.1, 0.2]} scale={0.3} ref={trishul} />
           <Cube position={[-0.2, 0.1, 0.2]} scale={0.3} ref={chakra} />
           <Cube position={[-0.2, 0.1, 0.2]} scale={0.3} ref={veda} />
