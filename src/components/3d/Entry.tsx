@@ -55,7 +55,6 @@ const Entry = () => {
           <Canvas
             gl={{
               toneMapping: THREE.ACESFilmicToneMapping,
-              toneMappingExposure: 150,
               outputColorSpace: THREE.SRGBColorSpace,
             }}
           >

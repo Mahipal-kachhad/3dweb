@@ -58,17 +58,20 @@ const VitthalbhaiBio = () => {
         </p>
 
         <p className="font-bold text-[#86868b] indent-50 pb-5 text-justify leading-8.5">
-          He was <span className="text-white font-extrabold">born in 1969</span> on the
-          auspicious day of{" "}
-          <span className="text-white font-extrabold">Vaishakh Sud Akhatrij</span> in a small
-          village in Gujarat. His{" "}
-          <span className="text-white font-extrabold">father, Nagjibhai,</span> was a farmer by
-          profession, and his{" "}
-          <span className="text-white font-extrabold">mother, Laduben,</span> was a homemaker.
-          He was their only son. Since childhood, he had an intense curiosity to
-          learn new things. He always had a passion for exploration and
-          research. From a young age, his approach to life was different from
-          others, and his perspective toward living was truly unique.
+          He was <span className="text-white font-extrabold">born in 1969</span>{" "}
+          on the auspicious day of{" "}
+          <span className="text-white font-extrabold">
+            Vaishakh Sud Akhatrij
+          </span>{" "}
+          in a small village in Gujarat. His{" "}
+          <span className="text-white font-extrabold">father, Nagjibhai,</span>{" "}
+          was a farmer by profession, and his{" "}
+          <span className="text-white font-extrabold">mother, Laduben,</span>{" "}
+          was a homemaker. He was their only son. Since childhood, he had an
+          intense curiosity to learn new things. He always had a passion for
+          exploration and research. From a young age, his approach to life was
+          different from others, and his perspective toward living was truly
+          unique.
         </p>
 
         <p className="font-bold text-[#86868b] indent-50 pb-5 text-justify leading-8.5">
@@ -100,8 +103,8 @@ const VitthalbhaiBio = () => {
           SHree Mahapatra
         </h2>
 
-        {moreDetailsParagraphs.map((val, itm) => (
-          <p className="pb-3 text-justify leading-8 indent-25">
+        {moreDetailsParagraphs.map((val, idx) => (
+          <p key={idx} className="pb-3 text-justify leading-8 indent-25">
             {val}
           </p>
         ))}

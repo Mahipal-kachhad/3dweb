@@ -10,7 +10,7 @@ import VitthalbhaiBio from "@/components/sreeVitthalbhai/VitthalbhaiBio";
 export default function Home() {
   return (
     <>
-      {/* <Entry /> */}
+      <Entry />
       {/* <div className="h-screen bg-black" /> */}
       <div className="to-[#1D1D1F] bg-gradient-to-r from-[#0A0A0A] min-h-screen">
         <div className="bg-black rounded-b-4xl h-10" />
@@ -19,8 +19,8 @@ export default function Home() {
         <GlimpsOfMaa />
         <SreeVitthalbhai />
         <VitthalbhaiBio />
-        <VideoModel />
-      <div className="h-screen bg-amber-900 -z-3" />
+        {/* <VideoModel /> */}
+      {/* <div className="h-screen bg-amber-900 -z-3" /> */}
 
       </div>
     </>

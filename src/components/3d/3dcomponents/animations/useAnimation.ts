@@ -106,9 +106,9 @@ export const useAnimation = (
       tl.to(light.current, { intensity: 3, duration: 3, ease: "power2.inOut" });
 
       tl.to(camera.position, {
-        x: -5.6,
-        y: 0.4,
-        z: 7.3,
+        x: -4.6,
+        y: 0.9,
+        z: 6.3,
         duration: 3,
         ease: "power1.inOut",
       });
@@ -136,7 +136,7 @@ export const useAnimation = (
       }
       tl.to(trishul.current.position, {
         x: -1.25,
-        y: 0,
+        y: 0.2,
         z: 2.92,
         ease: "power1.inOut",
         duration: 3,
@@ -145,7 +145,7 @@ export const useAnimation = (
         veda.current.position,
         {
           x: -0.13,
-          y: 0,
+          y: 0.2,
           z: 2.87,
           ease: "power1.inOut",
           duration: 3,
@@ -156,7 +156,7 @@ export const useAnimation = (
         chakra.current.position,
         {
           x: 1.43,
-          y: 0.15,
+          y: 0.1,
           z: 2.82,
           ease: "power1.inOut",
           duration: 3,
