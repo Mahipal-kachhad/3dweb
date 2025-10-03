@@ -1,6 +1,6 @@
 const MaaVishvambhari = () => {
   return (
-    <div className="pt-30 bg-black">
+    <div className="pt-30 rounded-t-4xl bg-black">
       <div className="w-2/5 mx-auto">
         <img src="/maa/Maa_Vishvambhari.png" alt="maa vishvambhari" />
       </div>

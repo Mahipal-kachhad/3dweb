@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { useThree } from "@react-three/fiber";
 import { useGSAP } from "@gsap/react";
@@ -18,6 +18,7 @@ import {
   EffectComposer,
   HueSaturation,
 } from "@react-three/postprocessing";
+import { Environment, OrbitControls, useTexture } from "@react-three/drei";
 
 const Experience = ({ scroller }: { scroller: DOMTarget }) => {
   const galaxyRef = useRef<THREE.Group>(null!);
@@ -47,6 +48,17 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
     chakra,
     veda
   );
+
+  function SceneBackground() {
+    const { scene } = useThree();
+    const texture = useTexture("/nebula.png");
+
+    useEffect(() => {
+      scene.background = texture;
+    }, [texture, scene]);
+
+    return null;
+  }
 
   useGSAP(
     () => {
@@ -98,7 +110,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
           <AuraCircle ref={auraRef} />
         </mesh>
         <mesh layers={2}>
-          <Shiva
+          {/* <Shiva
             ref={shivaRef}
             scale={0.15}
             position={[1.3, -0.29, 3]}
@@ -115,7 +127,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
             scale={0.22}
             position={[-1.3, -0.29, 3.1]}
             rotation-y={2.87}
-          />
+          /> */}
           <Cube position={[-0.2, 0.1, 0.2]} scale={0.3} ref={trishul} />
           <Cube position={[-0.2, 0.1, 0.2]} scale={0.3} ref={chakra} />
           <Cube position={[-0.2, 0.1, 0.2]} scale={0.3} ref={veda} />
@@ -130,6 +142,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
           receiveShadow={false}
         />
       </group>
+      <Environment files={"/3d/models/01.hdr"} background />
       <EffectComposer>
         {isBloom && (
           <EffectComposer resolutionScale={0.5}>
@@ -144,6 +157,7 @@ const Experience = ({ scroller }: { scroller: DOMTarget }) => {
           </EffectComposer>
         )}
       </EffectComposer>
+      <OrbitControls/>
     </>
   );
 };
