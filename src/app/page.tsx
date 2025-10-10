@@ -1,15 +1,15 @@
 "use client";
 import Entry from "@/components/3d/Entry";
-import AboutMVTY from "@/components/aboutMVTY/AboutMVTY";
-import BlurSlider from "@/components/blurSlider/BlurSlider";
-import Contact from "@/components/contact/Contact";
-import Darshan from "@/components/darshan/Darshan";
+import AboutMVTY from "@/components/AboutMVTY";
+import BlurSlider from "@/components/BlurSlider";
+import Contact from "@/components/Contact";
+import Darshan from "@/components/Darshan";
 import DhamInfo from "@/components/dham/DhamInfo";
 import VideoModel from "@/components/dham/VideoModel";
-import Events from "@/components/events/Events";
+import Events from "@/components/Events";
 import GlimpsOfMaa from "@/components/maaVishvambhari/GlimpsOfMaa";
 import MaaVishvambhari from "@/components/maaVishvambhari/MaaVishvambhari";
-import Map from "@/components/map/Map";
+import Map from "@/components/Map";
 import Pillars from "@/components/pillars/Pillars";
 import Quotes from "@/components/quotes/Quotes";
 import SreeVitthalbhai from "@/components/sreeVitthalbhai/SreeVitthalbhai";
@@ -34,7 +34,7 @@ export default function Home() {
         <Quotes />
         <Darshan />
         <Map />
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </>
   );
