@@ -26,12 +26,12 @@ const BlurSlider = () => {
         centeredSlides={true}
         slidesPerView={"auto"}
         spaceBetween={-20}
-        className="h-[65vh] max-w-full"
+        className="max-w-full"
       >
         {images.map((img, idx) => (
           <SwiperSlide
             key={idx}
-            className="!w-[50vw] !h-full overflow-hidden transition-all duration-300"
+            className="!w-[50vw] !h-[30vw] overflow-hidden transition-all duration-300"
           >
             {({ isActive }) => (
               <div

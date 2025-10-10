@@ -22,7 +22,7 @@ const DhamInfo = () => {
   const swiperRef = useRef<SwiperRef>(null);
 
   return (
-    <div className="bg-black pb-16 md:pb-20">
+    <div className="bg-black pb-6 md:pb-10">
       <motion.h2
         className="text-3xl lg:text-[2.5rem] xl:text-[3.4rem] font-bold w-[85vw] max-w-6xl mx-auto uppercase text-center text-[#ff8127]"
         {...fadeUp()}
@@ -30,9 +30,9 @@ const DhamInfo = () => {
         Maa Vishvambhari TirthYatra Dham
       </motion.h2>
 
-      <div className="flex items-center w-[85vw] max-w-6xl mx-auto py-10">
-        <motion.div className="flex-1 mt-10 w-[85vw] max-w-6xl mx-auto text-sm lg:text-lg" {...fadeUp()} >
-          <p className="font-bold text-[#86868b] indent-50 pb-5 text-justify leading-7 lg:leading-8">
+      <div className="flex items-center w-[85vw] max-w-6xl mx-auto pb-10">
+        <motion.div className="flex-1 mt-10 w-[85vw] max-w-6xl mx-auto text-[0.8rem] lg:text-lg " {...fadeUp()} >
+          <p className="font-bold text-[#86868b] indent-50 pb-5 text-justify leading-7 lg:leading-8 ">
             On the western coast of India, in south of Gujarat state, to the
             east of Valsad district there are lust green hill ranges of Sahyadri
             and on West side howling Arabian Sea. There is green belt of flower
@@ -59,7 +59,7 @@ const DhamInfo = () => {
             it is going to become center of ideological and spiritual revolution
             for distributing them to entire world in near future.
           </p>
-          <p className="font-bold text-[#86868b] indent-50 pb-5 text-justify leading-7 lg:leading-8">
+          <p className="font-bold text-[#86868b] indent-50 pb-5 text-justify leading-7 lg:leading-8 hidden xl:block">
             Mother ordered to{" "}
             <span className="text-white font-extrabold">
               Mahapatra (the founder of this Dham)
@@ -82,10 +82,10 @@ const DhamInfo = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-col items-center justify-center w-[480px]"
+          className="flex flex-col items-center justify-center w-[400px] lg:w-[480px]"
           {...fadeUp(0.2)}
         >
-          <div className="max-w-[480px] h-[520px]">
+          <div className="max-w-[480px] h-[420px] lg:h-[520px]">
             <Swiper
               ref={swiperRef}
               direction="vertical"
@@ -94,7 +94,7 @@ const DhamInfo = () => {
               className="rounded-2xl h-full"
             >
               {images.map((img, idx) => (
-                <SwiperSlide key={idx} className="!h-[250px]">
+                <SwiperSlide key={idx} className="!h-[200px] lg:!h-[250px]">
                   <img
                     src={img.url}
                     alt={`Gallery image ${idx + 1}`}

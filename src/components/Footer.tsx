@@ -12,7 +12,7 @@ const Footer = () => {
           <h2 className=" text-lg lg:text-2xl 2xl:text-3xl font-bold text-[#FF8127]">
             Maa Vishvambhari TirthYatra Dham
           </h2>
-          <p className="py-5 text-[#cbcbcb] text-sm lg:text-md xl:text-lg">
+          <p className="py-5 text-[#cbcbcb] text-sm lg:text-md xl:text-[1rem]">
             A sacred place of divine connection and spiritual growth. Join us in
             celebrating the eternal presence of Maa Vishvambhari and experience
             the profound peace and blessings of this holy sanctuary.
@@ -28,21 +28,21 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-3 lg:gap-5 w-md text-sm lg:text-lg">
+        <div className="flex flex-col gap-3 lg:gap-5 w-md text-sm lg:text-lg xl:text-[1rem]">
           <h3 className="text-lg xl:text-xl font-bold mb-1 lg:mb-3">Quick Links</h3>
-          <a href="#" className="text-[#cbcbcb]">
+          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
             Darshan Timings
           </a>
-          <a href="#" className="text-[#cbcbcb]">
+          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
             Events & Satsang
           </a>
-          <a href="#" className="text-[#cbcbcb]">
+          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
             Photo Gallery
           </a>
-          <a href="#" className="text-[#cbcbcb]">
+          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
             Location & Contact
           </a>
-          <a href="#" className="text-[#cbcbcb]">
+          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
             Our Pillars
           </a>
         </div>
@@ -53,7 +53,7 @@ const Footer = () => {
               <BsTelephoneFill className="text-sm text-[#FF8127]" />
             </div>
             <div>
-              <p className="font-bold text-[0.75rem] lg:text-lg text-[#cbcbcb]">
+              <p className="font-bold text-sm lg:text-lg xl:text-[1rem] text-[#cbcbcb]">
                 +91 72030 25755
               </p>
               <p className="text-[0.7rem] lg:text-sm text-[#686868]">
@@ -66,7 +66,7 @@ const Footer = () => {
               <HiMail className="text-xl lg:text-2xl text-[#FF8127]" />
             </div>
             <div>
-              <p className="font-bold text-[0.75rem] lg:text-lg text-[#cbcbcb]">
+              <p className="font-bold text-sm lg:text-lg xl:text-[1rem] text-[#cbcbcb]">
                 maavishvambhari@gmail.com
               </p>
             </div>
@@ -76,7 +76,7 @@ const Footer = () => {
               <MdLocationPin className="text-xl lg:text-2xl text-[#FF8127]" />
             </div>
             <div>
-              <p className="font-bold text-[0.75rem] lg:text-lg text-[#cbcbcb]">
+              <p className="font-bold text-sm lg:text-lg xl:text-[1rem] text-[#cbcbcb]">
                 Rabada - 396055
               </p>
               <p className=" text-[0.7rem] lg:text-sm text-[#686868]">
@@ -86,12 +86,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between items-center w-[85vw] max-w-7xl mx-auto py-10 text-sm lg:text-md xl:text-lg">
-        <p className="" >© 2025 Maa Vishvambhari TirthYatra Dham. All rights reserved.</p>
+      <div className="flex justify-between items-center w-[85vw] max-w-7xl mx-auto py-10 text-sm lg:text-lg xl:text-[1rem]">
+        <p >© 2025 Maa Vishvambhari TirthYatra Dham. All rights reserved.</p>
         <div className="flex gap-7 text-[#898989]">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Disclaimer</a>
+          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">Privacy Policy</a>
+          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">Terms of Service</a>
+          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">Disclaimer</a>
         </div>
       </div>
     </footer>

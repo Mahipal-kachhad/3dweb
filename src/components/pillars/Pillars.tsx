@@ -34,8 +34,9 @@ const Pillars = () => {
         { url: "/dham/maa15.jpg" },
         { url: "/dham/maa10.png" },
         { url: "/dham/maa11.png" },
-        { url: "/maa/Maa_Vishvambhari.png" },
         { url: "/dham/patr1.png" },
+        { url: "/dham/maa15.jpg" },
+        { url: "/dham/maa10.png" },
       ],
     },
     {
@@ -50,8 +51,9 @@ const Pillars = () => {
         { url: "/dham/maa15.jpg" },
         { url: "/dham/maa10.png" },
         { url: "/dham/maa11.png" },
-        { url: "/maa/Maa_Vishvambhari.png" },
         { url: "/dham/patr1.png" },
+        { url: "/dham/maa15.jpg" },
+        { url: "/dham/maa10.png" },
       ],
     },
     {
@@ -66,8 +68,9 @@ const Pillars = () => {
         { url: "/dham/maa15.jpg" },
         { url: "/dham/maa10.png" },
         { url: "/dham/maa11.png" },
-        { url: "/maa/Maa_Vishvambhari.png" },
         { url: "/dham/patr1.png" },
+        { url: "/dham/maa15.jpg" },
+        { url: "/dham/maa10.png" },
       ],
     },
     {
@@ -82,8 +85,9 @@ const Pillars = () => {
         { url: "/dham/maa15.jpg" },
         { url: "/dham/maa10.png" },
         { url: "/dham/maa11.png" },
-        { url: "/maa/Maa_Vishvambhari.png" },
         { url: "/dham/patr1.png" },
+        { url: "/dham/maa15.jpg" },
+        { url: "/dham/maa10.png" },
       ],
     },
     {
@@ -98,8 +102,9 @@ const Pillars = () => {
         { url: "/dham/maa15.jpg" },
         { url: "/dham/maa10.png" },
         { url: "/dham/maa11.png" },
-        { url: "/maa/Maa_Vishvambhari.png" },
         { url: "/dham/patr1.png" },
+        { url: "/dham/maa15.jpg" },
+        { url: "/dham/maa10.png" },
       ],
     },
     {
@@ -114,8 +119,9 @@ const Pillars = () => {
         { url: "/dham/maa15.jpg" },
         { url: "/dham/maa10.png" },
         { url: "/dham/maa11.png" },
-        { url: "/maa/Maa_Vishvambhari.png" },
         { url: "/dham/patr1.png" },
+        { url: "/dham/maa15.jpg" },
+        { url: "/dham/maa10.png" },
       ],
     },
     {
@@ -130,8 +136,9 @@ const Pillars = () => {
         { url: "/dham/maa15.jpg" },
         { url: "/dham/maa10.png" },
         { url: "/dham/maa11.png" },
-        { url: "/maa/Maa_Vishvambhari.png" },
         { url: "/dham/patr1.png" },
+        { url: "/dham/maa15.jpg" },
+        { url: "/dham/maa10.png" },
       ],
     },
   ];
@@ -216,8 +223,12 @@ const Pillars = () => {
                 alt={`${val.title} icon`}
                 className="block h-[25px] lg:h-[40px] "
               />
-              <h3 className="font-bold text-xl lg:text-2xl my-2">{val.title}</h3>
-              <p className="text-[0.7rem] lg:text-sm lg:leading-7 leading-4.5">{val.description}</p>
+              <h3 className="font-bold text-xl lg:text-2xl my-2">
+                {val.title}
+              </h3>
+              <p className="text-[0.7rem] lg:text-sm lg:leading-7 leading-4.5 line-clamp-3">
+                {val.detailedDescription}
+              </p>
 
               <BsPatchPlusFill
                 className="absolute right-3 bottom-3 lg:right-5 lg:bottom-5 text-2xl lg:text-3xl cursor-pointer"

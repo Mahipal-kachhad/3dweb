@@ -65,8 +65,8 @@ const VideoModel = () => {
   }, [divRef]);
 
   return (
-    <div className="h-[200vh] flex items-end z-0 bg-black" id="trigger-video">
-      <div className="w-full h-screen sticky bottom-0 flex items-center justify-center overflow-hidden">
+    <div className="h-[1000px] lg:h-fit 2xl:h-[2000px] flex items-end z-0 bg-black" id="trigger-video">
+      <div className="w-full h-screen lg:h-fit 2xl:h-screen sticky bottom-0 flex items-center justify-center overflow-hidden">
         <div className="w-7/10 h-fit relative" ref={divRef}>
           <div className="w-full h-fit p-1">
             <img src="/dham/dhamVideo.png" className="rounded-[6vw]" />

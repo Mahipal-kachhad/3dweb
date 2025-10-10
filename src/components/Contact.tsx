@@ -21,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full h-screen relative bg-black overflow-hidden">
+    <div className="w-full h-[700px] xl:h-[800px] relative bg-black overflow-hidden">
       <div className="h-full w-full">
         <div ref={divRef} className="origin-[top_center]">
           <img src="/icons/rays.png" alt="rays" className="opacity-60" />
@@ -36,23 +36,26 @@ const Contact = () => {
         <div className="flex gap-5">
           <input
             ref={inputRef1}
+            placeholder="Enter your Name"
             onFocus={() => handleFocus(1)}
-            className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 px-3 py-3 rounded-2xl"
+            className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-20 pe-3 py-3 rounded-2xl"
             type="text"
           />
           <input
+            placeholder="Enter your Email id"
             onFocus={() => handleFocus(2)}
-            className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 px-3 py-3 rounded-2xl"
+            className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-20 pe-3 py-3 rounded-2xl"
             type="text"
           />
         </div>
         <div className="pt-10">
           <textarea
+            placeholder="Enter your Message"
             onFocus={() => handleFocus(3)}
             name="message"
             id=""
             rows={4}
-            className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 px-3 py-3 rounded-2xl"
+            className="border-1 border-[#FF8127] bg-[#FF8127]/20 w-full outline-0 ps-20 pe-3 py-3 rounded-2xl"
           ></textarea>
           <button
             type="submit"
