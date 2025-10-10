@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import { FaPause, FaPlay } from "react-icons/fa";
-import fadeUp from "../function";
+import fadeUp from "./function";
 
 const images = [
   { url: "/dham/maa10.png" },
