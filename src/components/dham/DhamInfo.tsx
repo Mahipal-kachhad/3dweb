@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import fadeUp from "../function";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -8,15 +8,32 @@ import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import "swiper/css";
 import moreDetails from "./moreDetails";
+import axios from "axios";
 
 const DhamInfo = () => {
-  const images = [
+  const [images, setImages] = useState<{ url: string }[]>([
     { url: "/dham/maa10.png" },
     { url: "/dham/maa11.png" },
     { url: "/dham/maa15.jpg" },
     { url: "/dham/maa11.png" },
     { url: "/dham/maa10.png" },
-  ];
+  ]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://dhamadmin.cesihpl.com/edit_dham_image.php?action=list"
+      )
+      .then((data: any) => {
+        setImages(
+          data.data.images[0].sub_images.map((val: any) => {
+            return {
+              url: `https://dhamadmin.cesihpl.com/${val.url}`,
+            };
+          })
+        );
+      });
+  }, []);
 
   const [isOpen, setIsOpen] = useState(false);
   const swiperRef = useRef<SwiperRef>(null);
@@ -31,7 +48,10 @@ const DhamInfo = () => {
       </motion.h2>
 
       <div className="flex items-center w-[85vw] max-w-6xl mx-auto pb-10">
-        <motion.div className="flex-1 mt-10 w-[85vw] max-w-6xl mx-auto text-[0.8rem] lg:text-lg " {...fadeUp()} >
+        <motion.div
+          className="flex-1 mt-10 w-[85vw] max-w-6xl mx-auto text-[0.8rem] lg:text-lg "
+          {...fadeUp()}
+        >
           <p className="font-bold text-[#86868b] indent-50 pb-5 text-justify leading-7 lg:leading-8 ">
             On the western coast of India, in south of Gujarat state, to the
             east of Valsad district there are lust green hill ranges of Sahyadri

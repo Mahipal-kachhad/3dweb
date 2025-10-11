@@ -1,19 +1,35 @@
 import { HiArrowLongRight } from "react-icons/hi2";
 import BlurPopup from "../BlurPopup";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import fadeUp from "../function";
 import Slider from "../Slider";
+import axios from "axios";
 
 const VitthalbhaiBio = () => {
-  const images = [
+  const [images, setImages] = useState<{ url: string }[]>([
     { url: "/dham/patr1.png" },
     { url: "/dham/patr15.png" },
     { url: "/dham/patr1.png" },
     { url: "/dham/patr15.png" },
     { url: "/dham/patr1.png" },
     { url: "/dham/patr15.png" },
-  ];
+  ]);
+
+  useEffect(() => {
+    axios
+      .get("https://dhamadmin.cesihpl.com/edit_shree_mahapatra_image.php?action=list")
+      .then((data: any) => {
+        setImages(
+          data.data.images[0].sub_images.map((val: any) => {
+            return {
+              url: `https://dhamadmin.cesihpl.com/${val.url}`,
+            };
+          })
+        );
+      });
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   const moreDetailsParagraphs: string[] = [
     "Shri Vitthalbhai, the revered founder of Maa Vishwambhari Tirtha Dham, came to be known as “Mahapatra”, a sacred title personally bestowed upon him by Maa Vishwambhari. Behind this honor lies a deeply inspiring story, shaped by his unique way of life and unshakable devotion.",
@@ -107,7 +123,10 @@ const VitthalbhaiBio = () => {
         </h2>
 
         {moreDetailsParagraphs.map((val, idx) => (
-          <p key={idx} className="pb-3 text-justify leading-7 lg:leading-8 indent-25">
+          <p
+            key={idx}
+            className="pb-3 text-justify leading-7 lg:leading-8 indent-25"
+          >
             {val}
           </p>
         ))}

@@ -14,7 +14,7 @@ const Quotes = () => {
   return (
     <div className="w-full py-10 relative bg-black">
       <motion.h2
-        className="text-3xl lg:text-[2.5rem] xl:text-[3.4rem] font-bold w-[85vw] max-w-6xl mx-auto uppercase text-center text-[#ff8127]"
+        className="text-3xl lg:text-[2.5rem] xl:text-[3.4rem] font-bold w-[85vw] max-w-6xl mx-auto uppercase text-center text-[#ff8127] mt-10 lg:mt-15"
         {...fadeUp()}
       >
         Quotes by Mahapatra
@@ -24,6 +24,7 @@ const Quotes = () => {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
+        speed={700}
         coverflowEffect={{
           rotate: 50,
           stretch: 0,

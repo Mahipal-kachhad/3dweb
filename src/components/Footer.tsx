@@ -1,38 +1,46 @@
-import { AiOutlineYoutube } from "react-icons/ai";
-import { BsInstagram, BsTelephoneFill } from "react-icons/bs";
+import { BsTelephoneFill } from "react-icons/bs";
 import { HiMail } from "react-icons/hi";
-import { LuFacebook } from "react-icons/lu";
-import { MdLocationPin, MdOutlineLiveTv } from "react-icons/md";
+import { MdLocationPin } from "react-icons/md";
 
 const Footer = () => {
   return (
     <footer className="bg-black border-t-1 border-t-white/10">
       <div className="flex gap-10 w-[85vw] max-w-7xl mx-auto mt-10 pb-15 border-b-1 border-b-white/10 ">
-        <div className="w-full">
-          <div className="flex gap-5 items-center">
-            <img src="/icons/logo.png" alt="Logo" />
-            <h2 className=" text-lg lg:text-2xl 2xl:text-3xl font-bold text-[#FF8127]">
-              Maa Vishvambhari TirthYatra Dham
+        <div className="w-7xl lg:w-full pt-5">
+          <div className="flex gap-5 items-center lg:items-end -mb-1 -mt-5 ">
+            <img
+              src="/icons/logo.png"
+              alt="Logo"
+              className="h-[90px] lg:h-[125px] 2xl:h-[90px] hidden lg:block"
+            />
+             <h2 className="block lg:hidden font-bold text-[#FF8127] uppercase text-xl">
+              MVTY Dham
+            </h2>
+            <h2 className="hidden lg:block lg:text-2xl 2xl:text-[1.7rem] font-bold text-[#FF8127] uppercase leading-10">
+              Maa Vishvambhari <br />
+              TirthYatra Dham
             </h2>
           </div>
-          <p className="py-5 text-[#cbcbcb] text-sm lg:text-md xl:text-[1rem]">
-            A sacred place of divine connection and spiritual growth. Join us in
-            celebrating the eternal presence of Maa Vishvambhari and experience
-            the profound peace and blessings of this holy sanctuary.
+          <p className="py-5 text-[#cbcbcb] text-sm lg:text-md xl:text-[1rem] lg:w-9/10 text-justify leading-6 lg:leading-8">
+            Gujarat is a land of great warriors, saints and many great
+            personalities. In one small town of such great land a divine,
+            capable and dedicated soul known as Shri MAHAPATRA (Shri
+            Vitthalbhai) <span className="hidden lg:inline"> was born, who has charismatic personality. His deeds
+            and efforts created such a vast atmosphere of reverence, divinity
+            and light.</span>
           </p>
           <div className="flex gap-3 items-center">
-            <span>Follow us:</span>
-            <div className="flex gap-5 text-[#FF8127] items-center">
-              {" "}
-              <AiOutlineYoutube className="text-4xl" />
-              <BsInstagram className="text-3xl" />
-              <LuFacebook className="text-4xl" />
-              <MdOutlineLiveTv className="text-4xl" />
+            <span>Follow us :</span>
+            <div className="flex gap-5 text-[#FF8127] items-end">
+              <img src="/icons/tv.svg" alt="social media" />
+              <img src="/icons/youtube.svg" alt="social media" />
+              <img src="/icons/instagram.svg" alt="social media" />
+              <img src="/icons/facebook.svg" alt="social media" />
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-3 lg:gap-5 w-md text-sm lg:text-lg xl:text-[1rem]">
-          <h3 className="text-lg xl:text-xl font-bold mb-1 lg:mb-3">
+          <h3 className="text-lg xl:text-xl font-bold mb-1 lg:mb-3 text-[#ff8127] uppercase">
             Quick Links
           </h3>
           <a
@@ -67,7 +75,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="w-md">
-          <h3 className="text-xl font-bold mb-3 text-md lg:text-lg xl:text-xl">
+          <h3 className="text-xl font-bold mb-3 text-md lg:text-lg xl:text-xl text-[#ff8127] uppercase">
             Contact info
           </h3>
           <div className="flex gap-2 py-1 lg:py-3">
@@ -83,12 +91,12 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-2 py-1 lg:py-3">
+          <div className="flex gap-2 py-1 lg:py-3 items-center">
             <div className="p-1">
               <HiMail className="text-xl lg:text-2xl text-[#FF8127]" />
             </div>
             <div>
-              <p className="font-bold text-sm lg:text-lg xl:text-[1rem] text-[#cbcbcb]">
+              <p className="font-bold text-sm lg:text-lg xl:text-[1rem] text-[#cbcbcb] m-0 p-0">
                 maavishvambhari@gmail.com
               </p>
             </div>

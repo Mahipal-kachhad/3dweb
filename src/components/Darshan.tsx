@@ -8,7 +8,7 @@ const Darshan = () => {
           </h2>
 
           <ul className="space-y-6 text-neutral-100">
-            <li>
+            <li className="border-b-1 border-b-white/15 pb-4">
               <p className="font-semibold text-[0.8rem] lg:text-lg">
                 What is the daily darshan time schedule?
               </p>
@@ -21,13 +21,13 @@ const Darshan = () => {
                 </li>
               </ul>
             </li>
-            <li>
+            <li className="border-b-1 border-b-white/15 pb-4">
               <p className="font-semibold text-[0.8rem] lg:text-lg">
                 What is the Himalaya darshan closing time?
               </p>
               <p className="mt-2 text-neutral-400  ps-4 lg:ps-10 text-[0.65rem] lg:text-lg">- Everyday: 7:00 PM</p>
             </li>
-            <li>
+            <li >
               <p className="font-semibold text-[0.8rem] lg:text-lg">What is the aarti time?</p>
               <ul className="mt-2 text-neutral-400 space-y-1">
                 <li className= "ps-4 lg:ps-10 text-[0.65rem] lg:text-lg">- Morning: 8:15 AM (Everyday)</li>
@@ -45,7 +45,7 @@ const Darshan = () => {
             Following the new rules for Darshan at the Temple is mandatory.
           </p>
 
-          <ul className="space-y-3 text-neutral-300 list-disc list-inside text-[0.7rem] lg:text-lg">
+          <ul className="space-y-3 text-neutral-300 list-disc list-inside text-[0.7rem] lg:text-lg ps-6">
             <li>
               Women should come fully dressed (in saree or full attire) for
               Darshan.

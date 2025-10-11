@@ -14,6 +14,7 @@ const Slider = ({ images }: { images: { url: string }[] }) => {
         spaceBetween={24}
         initialSlide={1}
         centeredSlides
+        loop
         slidesPerView={"auto"}
         slidesPerGroup={1}
         className="!pb-7"

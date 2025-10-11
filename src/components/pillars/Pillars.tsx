@@ -26,7 +26,7 @@ const Pillars = () => {
       id: "pathshala",
       title: "Pathshala",
       description:
-        "Under The Guidance Of The Founder Of The Dham, Shri Mahapatra, Here One Can Learn The Vedic Ideology Of Maa Vishvambhari...",
+        "Under The Guidance Of The Founder Of The Dham, Shri Mahapatra, Here One Can Learn The Vedic Ideology... ",
       icon: "/icons/pathshala-icon.png",
       detailedDescription:
         "Under the guidance of the founder of the Dham, Shri Mahapatra, here one can learn the Vedic ideology of Maa Vishvambhari, divine messages, and the art of living. This spiritual school, known as Pathshala, offers profound teachings that connect devotees with ancient wisdom and divine consciousness. Within the sacred walls of Pathshala, one experiences visions of the three realms - heavens, earth, and netherworld, witnessing the divine form of Maa Vishwambhari in her sacred chariot, accompanied by celestial beings and the eternal swing of divine love.",
@@ -43,7 +43,7 @@ const Pillars = () => {
       id: "himalayas",
       title: "Himalayas",
       description:
-        "In A 200-Foot-Long Himalayan Cave Above The School, One Can See The Sheshnag And The Original Shivling Moving Slowly...",
+        "In A 200-Foot-Long Himalayan Cave Above The School, One Can See The Sheshnag And The Original Shivling...",
       icon: "/icons/himalayas-icon.png",
       detailedDescription:
         "In a 200-foot-long Himalayan cave above the school, one can see the Sheshnag and the original Shivling moving slowly, creating an atmosphere of divine mysticism. This sacred space represents the eternal connection between earth and heaven, where devotees experience the presence of Lord Shiva in his most powerful form. The cave's natural formations and spiritual energy create an environment perfect for meditation and spiritual awakening.",
@@ -60,7 +60,7 @@ const Pillars = () => {
       id: "gokuldham",
       title: "Gokuldham",
       description:
-        "In Gokuldham, The Captivating View Of Goverdhan Mountain Lifted By Shri Krishna And The Meadow Of Jashoda-Nand Baba Reveals...",
+        "In Gokuldham, The Captivating View Of Goverdhan Mountain Lifted By Shri Krishna And The Meadow Of...",
       icon: "/icons/gokuldham-icon.png",
       detailedDescription:
         "In Gokuldham, the captivating view of Goverdhan Mountain lifted by Shri Krishna and the meadow of Jashoda-Nand Baba reveals the divine play of Lord Krishna. This sacred space recreates the eternal Vrindavan, where devotees can witness the divine pastimes of Krishna and experience the love between mother and child. The spiritual atmosphere transports visitors to the golden age of divine love and devotion.",
@@ -77,7 +77,7 @@ const Pillars = () => {
       id: "yajna-shala",
       title: "Yajna Shala",
       description:
-        "Yajna Is A Symbol Of Indian Culture. Yajna Is Not Just A Religious Ritual, But A Vedic Way Of Living. The Wonderful Yajnashala Located...",
+        "Yajna Is A Symbol Of Indian Culture. Yajna Is Not Just A Religious Ritual, But A Vedic Way Of Living...",
       icon: "/icons/yajna-icon.png",
       detailedDescription:
         "Yajna is a symbol of Indian culture. Yajna is not just a religious ritual, but a Vedic way of living. The wonderful Yajnashala located here provides a sacred space for performing ancient fire ceremonies that connect the material world with the spiritual realm. These rituals purify the environment and elevate consciousness, creating harmony between nature and divinity.",
@@ -94,7 +94,7 @@ const Pillars = () => {
       id: "Vaikunthdham",
       title: "Vaikunthdham",
       description:
-        "Yajna is a symbol of Indian culture. Yajna is not just a religious ritual, but a Vedic way of living. The wonderful Yajnashala located...",
+        "Yajna is a symbol of Indian culture. Yajna is not just a religious ritual, but a Vedic way of living...",
       icon: "/icons/Vaikunthdham.png",
       detailedDescription:
         "Vaikunthdham represents the eternal abode of Lord Vishnu, where devotees experience divine bliss and eternal peace. This sacred space embodies the concept of Vaikuntha - the spiritual realm beyond material existence. Here, one can connect with the divine energy of Lord Vishnu and experience the ultimate goal of spiritual life.",
@@ -111,7 +111,7 @@ const Pillars = () => {
       id: "Panchvati",
       title: "Panchvati",
       description:
-        "Yajna Is A Symbol Of Indian Culture. Yajna Is Not Just A Religious Ritual, But A Vedic Way Of Living. The Wonderful Yajnashala Located...",
+        "Yajna Is A Symbol Of Indian Culture. Yajna Is Not Just A Religious Ritual, But A Vedic Way Of Living...",
       icon: "/icons/Panchvati.png",
       detailedDescription:
         "Panchvati, the sacred grove of five trees, represents the divine forest where Lord Rama spent his exile period. This spiritual space recreates the atmosphere of ancient India, where sages and devotees lived in harmony with nature. The five sacred trees symbolize the five elements and the balance of cosmic energies.",
@@ -128,7 +128,7 @@ const Pillars = () => {
       id: "Prakruti-Van",
       title: "Prakruti Van",
       description:
-        "Yajna Is A Symbol Of Indian Culture. Yajna Is Not Just A Religious Ritual, But A Vedic Way Of Living. The Wonderful Yajnashala Located...",
+        "Yajna Is A Symbol Of Indian Culture. Yajna Is Not Just A Religious Ritual, But A Vedic Way Of Living...",
       icon: "/icons/Prakruti_Van.png",
       detailedDescription:
         "Prakruti Van represents the natural forest environment where devotees can connect with Mother Nature and experience the divine presence in all living beings. This sacred grove teaches the importance of environmental consciousness and the interconnectedness of all life forms. It serves as a reminder of our duty to protect and preserve nature.",
@@ -149,14 +149,14 @@ const Pillars = () => {
 
   return (
     <div className="w-full py-10">
-      <div className="flex justify-between items-center w-[85vw] max-w-6xl mx-auto">
+      <div className="flex justify-between items-center w-[85vw] max-w-6xl mx-auto pt-5 lg:pt-9">
         <motion.h2
           className="text-3xl lg:text-[2.5rem] xl:text-[3.2rem] font-bold  uppercase text-[#ff8127]"
           {...fadeUp()}
         >
           explore our pillars
         </motion.h2>
-        <p
+        {/* <p
           className="text-end text-[#FF8127] flex w-fit ms-auto gap-3 items-center pe-4 pt-5 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -164,7 +164,7 @@ const Pillars = () => {
           <span className="inline text-2xl">
             <HiArrowLongRight />
           </span>
-        </p>
+        </p> */}
         <BlurPopup isOpen={isOpen} setIsOpen={setIsOpen}>
           <h2 className="text-3xl lg:text-[2.5rem] xl:text-[3.4rem] font-bold text-[#ff8127] text-center mb-5 lg:mb-10 uppercase">
             Explore our pillars
@@ -208,6 +208,7 @@ const Pillars = () => {
         spaceBetween={24}
         centeredSlides
         initialSlide={1}
+        speed={1300}
         slidesPerView={"auto"}
         slidesPerGroup={1}
         className="!pt-14 !pb-7 lg:!pt-22 lg:!pb-10"
@@ -215,23 +216,23 @@ const Pillars = () => {
         {pillarsContent.map((val) => (
           <SwiperSlide
             key={val.id}
-            className="!w-[250px] lg:!w-[350px] rounded-3xl aspect-7/5 bg-black relative"
+            className="!w-[320px] lg:!w-[350px] rounded-3xl aspect-70/44 lg:aspect-70/47 bg-black relative"
           >
-            <div className="p-4 lg:p-7">
+            <div className="p-6 lg:p-7">
               <img
                 src={val.icon}
                 alt={`${val.title} icon`}
-                className="block h-[25px] lg:h-[40px] "
+                className="block h-[35px] lg:h-[40px]"
               />
-              <h3 className="font-bold text-xl lg:text-2xl my-2">
+              <h3 className="font-bold text-xl lg:text-2xl mt-3 lg:mt-5 mb-1">
                 {val.title}
               </h3>
-              <p className="text-[0.7rem] lg:text-sm lg:leading-7 leading-4.5 line-clamp-3">
-                {val.detailedDescription}
+              <p className="text-[0.75rem] leading-6 lg:text-sm lg:leading-7 line-clamp-3 tracking-wide text-justify [word-spacing:2px]">
+                {val.description}
               </p>
 
               <BsPatchPlusFill
-                className="absolute right-3 bottom-3 lg:right-5 lg:bottom-5 text-2xl lg:text-3xl cursor-pointer"
+                className="absolute right-3 bottom-3 lg:right-5 lg:bottom-4 text-3xl lg:text-3xl cursor-pointer"
                 onClick={() => setSelectedPillar(val)}
               />
             </div>

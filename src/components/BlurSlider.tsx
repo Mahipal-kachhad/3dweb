@@ -1,37 +1,53 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import type { SwiperRef } from "swiper/react";
-
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
-const images = [
-  { url: "/dham/patr15.png" },
-  { url: "/dham/maa10.png" },
-  { url: "/dham/maa11.png" },
-  { url: "/dham/maa15.jpg" },
-  { url: "/dham/patr8.jpg" },
-  { url: "/dham/patr9.jpg" },
-  { url: "/dham/patr10.jpg" },
-  { url: "/dham/patr1.png" },
-];
+import axios from "axios";
 
 const BlurSlider = () => {
+  const [images, setImages] = useState<{ url: string }[]>([
+    { url: "/dham/patr15.png" },
+    { url: "/dham/maa10.png" },
+    { url: "/dham/maa11.png" },
+    { url: "/dham/maa15.jpg" },
+    { url: "/dham/patr8.jpg" },
+    { url: "/dham/patr9.jpg" },
+    { url: "/dham/patr10.jpg" },
+    { url: "/dham/patr1.png" },
+  ]);
+
+  useEffect(() => {
+    axios
+      .get("https://dhamadmin.cesihpl.com/edit_gaushla_image.php?action=list")
+      .then((data: any) => {
+        setImages(
+          data.data.images[0].sub_images.map((val: any) => {
+            return {
+              url: `https://dhamadmin.cesihpl.com${val.url}`,
+            };
+          })
+        );
+      });
+  }, []);
+
+  console.log(images);
+
   const swiperRef = useRef<SwiperRef>(null);
   return (
     <div className="w-full bg-black py-16 relative">
       <Swiper
         ref={swiperRef}
-        loop={true}
         centeredSlides={true}
         slidesPerView={"auto"}
         spaceBetween={-20}
+        speed={1300}
         className="max-w-full"
       >
         {images.map((img, idx) => (
           <SwiperSlide
             key={idx}
-            className="!w-[50vw] !h-[30vw] overflow-hidden transition-all duration-300"
+            className="!w-[50vw] !h-[30vw] overflow-hidden transition-all duration-500"
           >
             {({ isActive }) => (
               <div
@@ -68,8 +84,8 @@ const BlurSlider = () => {
           <FiChevronRight className="w-5 h-5" />
         </button>
       </div>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-neutral-950 to-transparent z-10"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-neutral-950 to-transparent z-10"></div>
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-black to-transparent z-10"></div>
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-black to-transparent z-10"></div>
     </div>
   );
 };

@@ -1,12 +1,13 @@
 import { HiArrowLongRight } from "react-icons/hi2";
 import BlurPopup from "../BlurPopup";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import fadeUp from "../function";
 import Slider from "../Slider";
+import axios from "axios";
 
 const GlimpsOfMaa = () => {
-  const images = [
+  const [images, setImages] = useState<{ url: string }[]>([
     { url: "/dham/maa10.png" },
     { url: "/dham/maa11.png" },
     { url: "/dham/maa15.jpg" },
@@ -17,7 +18,24 @@ const GlimpsOfMaa = () => {
     { url: "/dham/maa15.jpg" },
     { url: "/dham/maa11.png" },
     { url: "/dham/maa10.png" },
-  ];
+  ]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://dhamadmin.cesihpl.com/edit_maa_vishavambhari_image.php?action=list"
+      )
+      .then((data: any) => {
+        setImages(
+          data.data.images[0].sub_images.map((val: any) => {
+            return {
+              url: `https://dhamadmin.cesihpl.com/${val.url}`,
+            };
+          })
+        );
+      });
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-black py-10">
