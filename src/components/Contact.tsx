@@ -1,6 +1,8 @@
 import { useGSAP } from "@gsap/react";
+import axios, { AxiosError } from "axios";
 import gsap from "gsap";
 import { ChangeEvent, FormEvent, useRef, useState } from "react";
+import toast from "react-hot-toast";
 
 gsap.registerPlugin(useGSAP);
 
@@ -12,15 +14,38 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
-    console.log(data);
-    setData({
-      name: "",
-      email: "",
-      message: "",
-    });
-    gsap.to(divRef.current, { rotation: 0, duration: 0.5 });
+    const { name, email, message } = data;
+    if (!name && !email && !message) return;
+    try {
+      const responce = await axios.post(
+        `https://dhamadmin.cesihpl.com/api/inquiry_test.php`,
+        { email, name, message }
+      );
+      if (responce.data.success) {
+        toast.success("Message submited successfully");
+      }
+      setData({
+        name: "",
+        email: "",
+        message: "",
+      });
+      console.log(responce);
+    } catch (err) {
+      const error = err as AxiosError<{
+        success: boolean;
+        error: string;
+      }>;
+      if (
+        axios.isAxiosError<{
+          success: boolean;
+          error: string;
+        }>(error) &&
+        error.response
+      )
+        toast.error(error.response.data.error);
+    }
   };
 
   useGSAP(() => {

@@ -15,6 +15,7 @@ import Pillars from "@/components/pillars/Pillars";
 import Quotes from "@/components/quotes/Quotes";
 import SreeVitthalbhai from "@/components/sreeVitthalbhai/SreeVitthalbhai";
 import VitthalbhaiBio from "@/components/sreeVitthalbhai/VitthalbhaiBio";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
         <Map />
         <Contact />
         <Footer />
+        <Toaster position="top-center" reverseOrder={false} />
       </div>
     </>
   );

@@ -30,17 +30,16 @@ const BlurSlider = () => {
         );
       });
   }, []);
-
-  console.log(images);
-
   const swiperRef = useRef<SwiperRef>(null);
+
   return (
-    <div className="w-full bg-black py-16 relative">
+    <div className="w-full bg-black pb-16 pt-20 relative">
       <Swiper
         ref={swiperRef}
         centeredSlides={true}
         slidesPerView={"auto"}
         spaceBetween={-20}
+        loop
         speed={1300}
         className="max-w-full"
       >
