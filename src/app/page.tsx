@@ -35,7 +35,7 @@ export default function Home() {
         <Quotes />
         <Darshan />
         <Map />
-        {/* <Contact /> */}
+        <Contact />
         <Footer />
       </div>
     </>

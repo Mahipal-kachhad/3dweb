@@ -54,7 +54,7 @@ const Events = () => {
   return (
     <div className="h-fit w-full flex items-center justify-center py-15">
       <div className="flex mx-auto w-[85vw] max-w-6xl p-6 lg:p-10 rounded-4xl bg-black justify-between gap-10 items-center">
-        <div className="w-sm lg:w-lg rounded-lg text-white self-start h-[300px] lg:h-[450px]">
+        <div className="w-sm lg:w-md rounded-lg text-white h-[300px] lg:h-[400px] overflow-y-auto  [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           {" "}
           {accordionData.map((item, idx) => {
             const isOpen = openIndex === idx;
@@ -99,23 +99,26 @@ const Events = () => {
                           <p className="py-2 lg:py-3 text-[0.8rem]">
                             "Click below to join the event."
                           </p>
-                          <button className="border-1 border-amber-600 px-5 py-1.5 text-[0.8rem] rounded-full">
-                            Get started
+                          <button className="px-9 py-3 text-[0.9rem] text-[#FF8127]  font-bold rounded-full bg bg-[#ff8127]/10 border-t-1 border-t-white/20 border-l-1 border-l-white/20">
+                            Participate
                           </button>
                           <p className="py-2 text-sm text-neutral-500">
                             Join us live on:
                           </p>
                           <div className="flex gap-3 lg:gap-5 text-[#FF8127] text-2xl lg:text-4xl items-center">
-                            <MdLiveTv className="cursor-pointer" />
-                            <AiOutlineYoutube className="cursor-pointer" />
-                            <FaInstagram className="cursor-pointer" />
-                            <LuFacebook className="cursor-pointer" />
+                            <MdLiveTv className="cursor-pointer h-[40px]" />
+                            <AiOutlineYoutube className="cursor-pointer h-[40px]" />
+                            <FaInstagram className="cursor-pointer h-[40px]" />
+                            <LuFacebook className="cursor-pointer h-[40px]" />
                           </div>
                         </div>
                       ) : (
                         <ol className="list-decimal list-inside pl-2 pb-4 text-neutral-400 space-y-1">
                           {item.content.map((event) => (
-                            <li className="text-[#FF8127] text-[0.8rem] lg:text-lg" key={event}>
+                            <li
+                              className="text-[#FF8127] text-[0.8rem] lg:text-lg"
+                              key={event}
+                            >
                               {event}
                             </li>
                           ))}

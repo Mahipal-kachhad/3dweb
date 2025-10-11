@@ -9,9 +9,12 @@ const Footer = () => {
     <footer className="bg-black border-t-1 border-t-white/10">
       <div className="flex gap-10 w-[85vw] max-w-7xl mx-auto mt-10 pb-15 border-b-1 border-b-white/10 ">
         <div className="w-full">
-          <h2 className=" text-lg lg:text-2xl 2xl:text-3xl font-bold text-[#FF8127]">
-            Maa Vishvambhari TirthYatra Dham
-          </h2>
+          <div className="flex gap-5 items-center">
+            <img src="/icons/logo.png" alt="Logo" />
+            <h2 className=" text-lg lg:text-2xl 2xl:text-3xl font-bold text-[#FF8127]">
+              Maa Vishvambhari TirthYatra Dham
+            </h2>
+          </div>
           <p className="py-5 text-[#cbcbcb] text-sm lg:text-md xl:text-[1rem]">
             A sacred place of divine connection and spiritual growth. Join us in
             celebrating the eternal presence of Maa Vishvambhari and experience
@@ -29,25 +32,44 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-3 lg:gap-5 w-md text-sm lg:text-lg xl:text-[1rem]">
-          <h3 className="text-lg xl:text-xl font-bold mb-1 lg:mb-3">Quick Links</h3>
-          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
+          <h3 className="text-lg xl:text-xl font-bold mb-1 lg:mb-3">
+            Quick Links
+          </h3>
+          <a
+            href="#"
+            className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out"
+          >
             Darshan Timings
           </a>
-          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
+          <a
+            href="#"
+            className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out"
+          >
             Events & Satsang
           </a>
-          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
+          <a
+            href="#"
+            className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out"
+          >
             Photo Gallery
           </a>
-          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
+          <a
+            href="#"
+            className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out"
+          >
             Location & Contact
           </a>
-          <a href="#" className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out">
+          <a
+            href="#"
+            className="text-[#cbcbcb] hover:text-[#ff8127] transition ease-in-out"
+          >
             Our Pillars
           </a>
         </div>
         <div className="w-md">
-          <h3 className="text-xl font-bold mb-3 text-md lg:text-lg xl:text-xl">Contact info</h3>
+          <h3 className="text-xl font-bold mb-3 text-md lg:text-lg xl:text-xl">
+            Contact info
+          </h3>
           <div className="flex gap-2 py-1 lg:py-3">
             <div className="p-2">
               <BsTelephoneFill className="text-sm text-[#FF8127]" />
@@ -87,11 +109,17 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between items-center w-[85vw] max-w-7xl mx-auto py-10 text-sm lg:text-lg xl:text-[1rem]">
-        <p >© 2025 Maa Vishvambhari TirthYatra Dham. All rights reserved.</p>
+        <p>© 2025 Maa Vishvambhari TirthYatra Dham. All rights reserved.</p>
         <div className="flex gap-7 text-[#898989]">
-          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">Privacy Policy</a>
-          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">Terms of Service</a>
-          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">Disclaimer</a>
+          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">
+            Privacy Policy
+          </a>
+          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">
+            Terms of Service
+          </a>
+          <a href="#" className="hover:text-[#ff8127] transition ease-in-out">
+            Disclaimer
+          </a>
         </div>
       </div>
     </footer>

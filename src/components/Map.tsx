@@ -9,7 +9,7 @@ const Map = () => {
       <div className="w-[85vw] max-w-7xl mx-auto flex justify-between gap-7 rounded-xl lg:rounded-3xl">
         <div className=" text-white w-sm lg:w-lg rounded-xl lg:rounded-3xl bg-[#1c1c1c]">
           <h2 className="text-xl lg:text-3xl font-bold text-white p-4 lg:p-7">
-           MVTY Dham Destails
+           MVTY Dham Details
           </h2>
 
           <div className="text-neutral-100 rounded-2xl bg-[#282828] p-2 lg:p-4">
@@ -39,7 +39,7 @@ const Map = () => {
               </div>
               <div>
                 <h4 className="font-bold text-[0.75rem] lg:text-lg">Office</h4>
-                <p className="text-[0.7rem] lg:text-sm text-[#686868]">come sat hello at Office HQ.</p>
+                <p className="text-[0.7rem] lg:text-sm text-[#686868]">Time : Mon to Sat</p>
                 <p className="font-bold text-[0.75rem] lg:text-lg">Maa Vishvambhari TirthYatra Dham, Rabada - 396055, Ta. & Dist. Valsad (Guj-IND)</p>
               </div>
             </div>
